@@ -1,18 +1,22 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './Service.css'
 
 const Service = ({ service }) => {
   const { details, title, img } = service;
   return (
     <div className="col-md-3">
-      <Card  className="border-0" style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={img} />
+      <Card className="border-0" style={{ width: '18rem' }}>
+        <div className="inner">
+          <Card.Img className="" variant="top" src={img} />
+        </div>
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>
             {details}
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Link to="/" className="fw-bold text-decoration-none">READ MORE  <i className="fas fa-plus-circle"></i></Link>
         </Card.Body>
       </Card>
     </div>
