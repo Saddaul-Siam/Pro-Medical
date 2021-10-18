@@ -16,6 +16,7 @@ import Navbar from './Sheard/Navbar/Navbar';
 import AuthProvider from './context/authProvider';
 import Login from './components/Login/Login/Login';
 import PrivetRoute from './PrivetRoute/PriverRoute';
+import Register from './components/Login/Register/Register';
 
 function App() {
   return (
@@ -35,9 +36,9 @@ function App() {
           <PrivetRoute path="/specialist/:id">
             <SpecialistsDetails></SpecialistsDetails>
           </PrivetRoute>
-          <PrivetRoute path="/services">
+          <Route path="/services">
             <Services></Services>
-          </PrivetRoute>
+          </Route>
           <PrivetRoute path="/service/:id">
             <ServicesDetails></ServicesDetails>
           </PrivetRoute>
@@ -52,6 +53,9 @@ function App() {
           </PrivetRoute>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
           </Route>
           <Route path="*">
             <Notfound></Notfound>

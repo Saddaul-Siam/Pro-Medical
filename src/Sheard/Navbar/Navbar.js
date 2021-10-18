@@ -29,10 +29,11 @@ const Navbar = () => {
                 <Link className="nav-link" to="/about">About Us</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link disabled" to="">{user.displayName}</Link>
+                {user.displayName?<Link className="nav-link disabled" to="">{user.displayName}</Link>
+                :<Link className="nav-link disabled" to="">{user.email}</Link>}
               </li>
               {user.email ? <li className="nav-item">
-                <Link className="nav-link" to="/login"><Button onClick={SignOut}>LogOut</Button></Link>
+                <Link className="nav-link" to="/login"><Button className="rounded-pill px-4" onClick={SignOut}><i className="fas fa-sign-out-alt"></i>  LogOut</Button></Link>
               </li>
                 : <li className="nav-item">
                   <Link className="nav-link" to="/login">Login</Link>

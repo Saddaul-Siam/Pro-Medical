@@ -1,69 +1,47 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import './Login.css'
 
 const Login = () => {
-  const { handleGoogleSignIn, SingnOut, user, error } = useAuth();
+  const { handleGoogleSignIn, handleUserLogin } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-/*   const hanldeEmail = (e) => {
+  const handleEmail = (e) => {
     setEmail(e.target.value);
   };
-  const hanldePassword = (e) => {
+  const handlePassword = (e) => {
     setPassword(e.target.value);
   };
 
-  // console.log(email, password);
-
-  const handleRegister = () => {
-    handleUserRegister(email, password);
-  };
+  console.log(email, password);
 
   const handleLogin = () => {
     handleUserLogin(email, password);
   };
- */
+
   return (
-    <div className="div d-flex justify-content-center align-items-center">
-      <div>
-        {/* <div className="form-input mt-5">
-          <input
-            onChange={hanldeEmail}
-            className="mt-2 p-2"
-            type="email"
-            placeholder="Email"
-          />
+    <div className="div d-flex justify-content-center align-items-center shadow border-3 background ">
+      <div className="shadow border-3 m-5 p-5 bg-white login-form">
+        <div className="d-d-flex justify-content-center">
+          <h2>Login Form</h2>
+        </div>
+        <div className="form-input">
+          <input onChange={handleEmail} className="mt-2 p-2 border-0 input-field" type="email" placeholder="Email" />
           <br />
-          <input
-            onChange={hanldePassword}
-            className="mt-2 p-2"
-            type="password"
-            placeholder="Password"
-          />
+          <input onChange={handlePassword} className="mt-2 p-2 border-0 input-field" type="password" placeholder="Password" />
           <br />
-          <div className="login-regiater-btn mt-4">
-            <button
-              onClick={handleRegister}
-              className="btn btn-primary me-1"
-            >
-              Register
-            </button>
-            <button onClick={handleLogin} className="btn btn-success ms-1">
-              Login
-            </button>
+          <div className="login-register-btn mt-4 d-flex justify-content-center">
+            <button onClick={handleLogin} className="btn btn-primary rounded-pill btn-regular">Login</button>
           </div>
-        </div> */}
-        <div className="login-btn mt-4">
-          <button
-            onClick={handleGoogleSignIn}
-            className="btn btn-warning m-2"
-          >
-            google sign in
-          </button>
-          {/* <button onClick={handleGithubLogin} className="btn btn-dark m-2">
-            Github sign in
-          </button> */}
+          <div className="d-flex justify-content-center mt-2">
+            <Link to="/register" className="">New user please register</Link>
+          </div>
+        </div>
+        <div className="login-btn mt-4 d-flex justify-content-center">
+          <button onClick={handleGoogleSignIn} className="btn btn-warning btn-regular rounded-pill"><i className="fab fa-google"></i> Google sign in </button>
         </div>
       </div>
     </div >
