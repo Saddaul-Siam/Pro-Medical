@@ -14,7 +14,7 @@ const Doctor = ({ doctor }) => {
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <Card.Text>{title}</Card.Text>
-            <Link to="/" className="fw-bold text-decoration-none">READ MORE  <i className="fas fa-plus-circle"></i></Link>
+            <Link to={`/doctor/${id}`} className="fw-bold text-decoration-none">READ MORE  <i className="fas fa-plus-circle"></i></Link>
           </Card.Body>
         </Card>
       </Link>
