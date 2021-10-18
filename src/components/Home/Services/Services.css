@@ -1,0 +1,9 @@
+.service-banner{
+    background-image: url("https://i.ibb.co/nRbz9Cb/Screenshot-2021-10-18-015335.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-size: cover;
+    height:540px;
+    width: 100%;
+}

@@ -1,0 +1,9 @@
+.about-banner{
+background-image: url("https://i.ibb.co/zSynS62/Screenshot-2021-10-18-015423.png");
+background-repeat: no-repeat;
+background-position: center;
+background-blend-mode: overlay;
+background-size: cover;
+height:540px;
+width: 100%;
+}

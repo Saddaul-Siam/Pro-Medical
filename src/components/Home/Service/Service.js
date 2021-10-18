@@ -4,22 +4,20 @@ import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({ service }) => {
-  const { details, title, img } = service;
+  const { name, img } = service;
   return (
     <div className="col-md-3">
-      <Card className="border-0" style={{ width: '18rem' }}>
-        <div className="inner">
-          <Card.Img className="" variant="top" src={img} />
-        </div>
-        <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>
-            {details}
-          </Card.Text>
-          <Link to="/" className="fw-bold text-decoration-none">READ MORE  <i className="fas fa-plus-circle"></i></Link>
-        </Card.Body>
-      </Card>
-    </div>
+      <Link to="/" className="fw-bold text-decoration-none text-black">
+        <Card className="border-0" style={{ width: '18rem' }}>
+          <div className="inner">
+            <Card.Img className="" variant="top" src={img} />
+          </div>
+          <Card.Body>
+            <Card.Title>{name}</Card.Title>
+          </Card.Body>
+        </Card>
+      </Link>
+    </div >
   );
 };
 

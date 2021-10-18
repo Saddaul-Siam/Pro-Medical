@@ -1,9 +1,15 @@
 import React from 'react';
+import Care from '../Care/Care';
+import './About.css'
 
 const About = () => {
   return (
     <div>
-      <h2>this is about</h2>
+      <div className="about-banner">
+      </div>
+      <div className="py-5">
+        <Care></Care>
+      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Care = () => {
   return (
-    <div className="container">
+    <div className="container py-5">
       <div className="row">
         <div className="col-md-4 pe-5">
           <div>

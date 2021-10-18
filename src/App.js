@@ -6,6 +6,7 @@ import Home from './components/Home/Home/Home';
 import Notfound from './components/Home/Notfound/Notfound';
 import Services from './components/Home/Services/Services';
 import Specialists from './components/Home/Specialists/Specialists';
+import Footer from './Sheard/Footer/Footer';
 import Navbar from './Sheard/Navbar/Navbar';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Notfound></Notfound>
         </Route>
       </Switch>
+      <Footer></Footer>
     </BrowserRouter>
   );
 }
