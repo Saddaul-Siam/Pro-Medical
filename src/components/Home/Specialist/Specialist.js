@@ -1,20 +1,22 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Specialist = ({ specialist }) => {
-  const { name, title, img } = specialist;
+  const { name, title, img, id } = specialist;
   return (
     <div className="col-md-2 mx-3">
-      <Card className="border-0" style={{ width: '14rem' }}>
-        <div className="inner"><Card.Img className="img-fluid" variant="top" src={img} /></div>
-        <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Text>
-            {title}
-          </Card.Text>
-          {/* <Button variant="primary">Go somewhere</Button> */}
-        </Card.Body>
-      </Card>
+      <Link to={`/specialist/${id}`} className="fw-bold text-decoration-none text-black">
+        <Card className="border-0" style={{ width: '14rem' }}>
+          <div className="inner"><Card.Img className="img-fluid" variant="top" src={img} /></div>
+          <Card.Body>
+            <Card.Title>{name}</Card.Title>
+            <Card.Text>
+              {title}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Link>
     </div>
   );
 };

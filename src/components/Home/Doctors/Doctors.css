@@ -1,0 +1,9 @@
+.doctors-banner{
+  background-image: url("https://i.ibb.co/dDRxWcB/Screenshot-2021-10-18-143852.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-size: cover;
+    height:540px;
+    width: 100%;
+}
