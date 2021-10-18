@@ -16,7 +16,7 @@ const BlogPost = ({ blogPost }) => {
             <Card.Text>
               {title}
             </Card.Text>
-            <Link to="/" className="fw-bold text-decoration-none">READ MORE  <i className="fas fa-plus-circle"></i></Link>
+            <Link to={`/blog/${id}`} className="fw-bold text-decoration-none">READ MORE  <i className="fas fa-plus-circle"></i></Link>
           </Card.Body>
         </Card>
       </Link>

@@ -12,7 +12,7 @@ const Specialists = () => {
     <div className="container">
       <div className="row">
         <h1>Our Specialists</h1>
-        {specialists.map(specialist => <Specialist specialist={specialist}></Specialist>)}
+        {specialists.map(specialist => <Specialist key={specialist.id} specialist={specialist}></Specialist>)}
       </div>
     </div>
   );

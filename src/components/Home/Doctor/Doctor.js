@@ -3,10 +3,10 @@ import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Doctor = ({ doctor }) => {
-  const { img, title, name } = doctor;
+  const { img, title, name,id } = doctor;
   return (
     <div className=" col-md-3">
-      <Link to="/" className="fw-bold text-decoration-none text-black">
+      <Link to={`/doctor/${id}`} className="fw-bold text-decoration-none text-black">
         <Card className="border-0" style={{ width: '18rem' }}>
           <div className="inner">
             <Card.Img className="" variant="top" src={img} />

@@ -1,6 +1,5 @@
 import { Button } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
-import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 

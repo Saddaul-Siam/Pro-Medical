@@ -5,21 +5,21 @@ import './Services.css'
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch('./allServices.json')
+    fetch('/allServices.json')
       .then(res => res.json())
       .then(data => setServices(data))
   }, []);
   const category = "diagnosis";
   const servicesDiagnosis = services.filter(service => service.category === category);
-  console.log(servicesDiagnosis);
+  // console.log(servicesDiagnosis);
 
   const category2 = "therapy";
   const servicesTherapy = services.filter(service => service.category === category2);
-  console.log(servicesTherapy);
+  // console.log(servicesTherapy);
 
   const category3 = "labTests";
   const servicesLabTests = services.filter(service => service.category === category3);
-  console.log(servicesLabTests);
+  // console.log(servicesLabTests);
   return (
     <div>
       <div className="service-banner"></div>
