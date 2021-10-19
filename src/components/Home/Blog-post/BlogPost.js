@@ -14,9 +14,9 @@ const BlogPost = ({ blogPost }) => {
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <Card.Text>
-              {title}
+              <p className="fw-normal">{title}</p>
             </Card.Text>
-            <Link to={`/blog/${id}`} className="fw-bold text-decoration-none">READ MORE  <i className="fas fa-plus-circle"></i></Link>
+            <h6 className="text-primary">READ MORE  <i className="fas fa-plus-circle"></i></h6>
           </Card.Body>
         </Card>
       </Link>

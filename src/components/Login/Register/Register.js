@@ -41,7 +41,7 @@ const Register = () => {
   }
 
   return (
-    <div className="div d-flex justify-content-center align-items-center shadow border-3 background ">
+    <div className="div d-flex justify-content-center align-items-center shadow border-3 background padding">
       <div className="shadow border-3 m-5 p-5 bg-white login-form">
         <div className="d-d-flex justify-content-center">
           <h2>Register Form</h2>

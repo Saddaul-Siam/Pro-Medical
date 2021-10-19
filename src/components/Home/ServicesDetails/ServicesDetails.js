@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import './ServicesDetails.css'
 
 const ServicesDetails = () => {
   const [service, setService] = useState([]);
-  const {id} = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     fetch('/allServices.json')
@@ -15,7 +16,7 @@ const ServicesDetails = () => {
   const services = service.filter(bp => bp.id === id);
   console.log(services);
   return (
-    <div className="container py-5">
+    <div className="container pt-5 padding">
       <div className="row">
         <div className="col-md-7">
           <img className="img-fluid w-75" src={services[0]?.img} alt="" />
