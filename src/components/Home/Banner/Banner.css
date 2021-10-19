@@ -8,3 +8,13 @@
     width: 100%;
   
 }
+.title{
+  padding-top: 350px;
+}
+span.title {
+  font-size: 50px;
+  font-weight: 700;
+}
+.title-color{
+  color: #6A6BBF;
+}

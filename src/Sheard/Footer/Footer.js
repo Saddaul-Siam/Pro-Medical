@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="col-md-4">
               <div className="left-container text-start">
                 <Link className="" to="/">
-                  <img src="https://i.ibb.co/qDXmztd/logo-main-img-2.png" alt="" width="168" height="44" /></Link>
+                  <img src="https://i.ibb.co/PgxWpBR/logo-main-img.png" alt="" width="168" height="44" /></Link>
                 <div className="icons-container d-flex text-center ">
                   <div className="icon">
                     <i className="fab fa-instagram-square"></i>
