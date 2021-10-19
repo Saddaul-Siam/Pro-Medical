@@ -11,10 +11,7 @@ const useFirebase = () => {
   const provider = new GoogleAuthProvider();
 
   const handleGoogleSignIn = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        setUser(result.user)
-      })
+    return signInWithPopup(auth, provider)
       .catch((error) => {
         setError(error.message)
       });
@@ -37,31 +34,23 @@ const useFirebase = () => {
       });
   };
   const handleUserRegister = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        setUser(user)
-      })
+    return createUserWithEmailAndPassword(auth, email, password)
+    
       .catch((error) => {
         const errorMessage = error.message;
-        setError(errorMessage)
+        const errorCode = error.code;
+        setError(errorMessage, errorCode)
       })
-      .finally(() => {
-        window.location.reload()
-      })
+      // .finally(() => {
+      //   window.location.reload()
+      // })
   };
 
   const handleUserLogin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        console.log(result.user);
-      })
+    return signInWithEmailAndPassword(auth, email, password)
       .catch((error) => {
         const errorMessage = error.message;
         setError(errorMessage)
-      })
-      .finally(() => {
-        window.location.reload()
       })
   };
   return {
@@ -70,7 +59,8 @@ const useFirebase = () => {
     handleUserLogin,
     SignOut,
     user,
-    error
+    error,
+    setUser
   }
 };
 

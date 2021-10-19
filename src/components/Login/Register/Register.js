@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 
 const Register = () => {
-  const { handleGoogleSignIn, handleUserRegister, } = useAuth();
+  const { handleGoogleSignIn, setUser, handleUserRegister, error } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const location = useLocation();
+  const history = useHistory();
+
+  const redirect_url = location.state?.from || '/';
+  console.log("come form", location.state?.from);
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -18,8 +24,21 @@ const Register = () => {
   console.log(email, password);
 
   const handleRegister = () => {
-    handleUserRegister(email, password);
+    handleUserRegister(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        setUser(user)
+        history.push(redirect_url)
+      })
   };
+  const signInWithGoogle = () => {
+    handleGoogleSignIn()
+      .then((userCredential) => {
+        const user = userCredential.user;
+        setUser(user)
+        history.push(redirect_url)
+      })
+  }
 
   return (
     <div className="div d-flex justify-content-center align-items-center shadow border-3 background ">
@@ -32,6 +51,10 @@ const Register = () => {
           <br />
           <input onChange={handlePassword} className="mt-2 p-2 border-0 input-field" type="password" placeholder="Password" />
           <br />
+          <div className="d-flex justify-content-center">
+            <p>{error.message}</p>
+            <p>{error.code}</p>
+          </div>
           <div className="login-register-btn mt-4 d-flex justify-content-center">
             <button onClick={handleRegister} className="btn btn-primary rounded-pill btn-regular">Register</button>
           </div>
@@ -40,7 +63,7 @@ const Register = () => {
           </div>
         </div>
         <div className="login-btn mt-4">
-          <button onClick={handleGoogleSignIn} className="btn btn-warning btn-regular rounded-pill"><i className="fab fa-google"></i> Google sign in </button>
+          <button onClick={signInWithGoogle} className="btn btn-warning btn-regular rounded-pill"><i className="fab fa-google"></i> Google sign in </button>
         </div>
       </div>
     </div >
