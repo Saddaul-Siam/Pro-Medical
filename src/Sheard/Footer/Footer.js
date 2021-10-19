@@ -54,8 +54,8 @@ const Footer = () => {
                 <p>Mon – Fri: 9 a.m. – 5 p.m.
                   Sat – Sun: Closed</p>
                 <h4><i className="fas fa-hospital-alt"></i> Hospital: Pabna, Dahaka, Bangladesh</h4>
-                <p><i class="fas fa-envelope"></i> Email:saddadul.siam@gmail.com</p>
-                <p><i class="fas fa-phone-alt"></i> Phone: +8801311333277</p>
+                <p><i className="fas fa-envelope"></i> Email:saddadul.siam@gmail.com</p>
+                <p><i className="fas fa-phone-alt"></i> Phone: +8801311333277</p>
               </div>
             </div>
           </div>

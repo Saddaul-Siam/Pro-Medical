@@ -14,7 +14,7 @@ const BlogPost = ({ blogPost }) => {
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <Card.Text>
-              <p className="fw-normal">{title}</p>
+              <span className="fw-normal">{title}</span>
             </Card.Text>
             <h6 className="text-primary">READ MORE  <i className="fas fa-plus-circle"></i></h6>
           </Card.Body>

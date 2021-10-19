@@ -12,7 +12,7 @@ const Specialist = ({ specialist }) => {
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <Card.Text>
-              <p className="fw-normal">{title}</p>
+              <span className="fw-normal">{title}</span>
             </Card.Text>
           </Card.Body>
         </Card>

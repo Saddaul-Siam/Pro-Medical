@@ -13,7 +13,7 @@ const SpecialistsDetails = () => {
       .then(data => setSpecialists(data))
   }, []);
   const spc = Specialists.filter(specialist => specialist.id === id);
-  console.log(spc[0]);
+  // console.log(spc[0]);
   return (
     <div className="container py-5">
       <div className="row">

@@ -13,7 +13,7 @@ const BlogPostsDetails = () => {
       .then(data => setBlogPost(data))
   }, []);
   const blog = blogPost.filter(bp => bp.id === id);
-  console.log(blog[0]);
+  // console.log(blog[0]);
   return (
     <div className="container py-5">
       <div className="row">

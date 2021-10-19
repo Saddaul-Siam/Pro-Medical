@@ -10,7 +10,7 @@ const Login = () => {
   const history = useHistory();
 
   const redirect_url = location.state?.from || '/';
-  console.log("come form", location.state?.from);
+  // console.log("come form", location.state?.from);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,7 +22,7 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  console.log(email, password);
+  // console.log(email, password);
 
   const handleLogin = () => {
     handleUserLogin(email, password)

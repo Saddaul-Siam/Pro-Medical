@@ -12,7 +12,7 @@ const Register = () => {
   const history = useHistory();
 
   const redirect_url = location.state?.from || '/';
-  console.log("come form", location.state?.from);
+  // console.log("come form", location.state?.from);
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -21,7 +21,7 @@ const Register = () => {
     setPassword(e.target.value);
   };
 
-  console.log(email, password);
+  // console.log(email, password);
 
   const handleRegister = () => {
     handleUserRegister(email, password)

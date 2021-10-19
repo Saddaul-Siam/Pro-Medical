@@ -14,7 +14,7 @@ const ServicesDetails = () => {
       .then(data => setService(data))
   }, []);
   const services = service.filter(bp => bp.id === id);
-  console.log(services);
+  // console.log(services);
   return (
     <div className="container pt-5 padding">
       <div className="row">

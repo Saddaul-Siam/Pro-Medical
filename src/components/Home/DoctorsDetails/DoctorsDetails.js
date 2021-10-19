@@ -13,7 +13,7 @@ const DoctorsDetails = () => {
       .then(data => setService(data))
   }, []);
   const services = service.filter(bp => bp.id === id);
-  console.log(services);
+  // console.log(services);
   return (
     <div className="container py-5">
       <div className="row">
