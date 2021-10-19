@@ -6,7 +6,7 @@ import './Service.css'
 const Service = ({ service }) => {
   const { name, img, id } = service;
   return (
-    <div className="col-md-3">
+    <div className="col-sm-6 col-md-6 col-lg-3">
       <Link to={`/service/${id}`} className="fw-bold text-decoration-none text-black">
         <Card className="border-0" style={{ width: '18rem' }}>
           <div className="inner">

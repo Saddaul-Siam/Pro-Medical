@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Navbar = () => {
@@ -17,20 +17,20 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
+                <NavLink className="nav-link active" aria-current="page" to="/home" activeStyle={{ fontWeight: "bold", color: "gray" }}>Home</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/services">Services</Link>
+                <NavLink className="nav-link" to="/services" activeStyle={{ fontWeight: "bold", color: "gray" }}>Services</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/doctors">Doctors</Link>
+                <NavLink className="nav-link" to="/doctors" activeStyle={{ fontWeight: "bold", color: "gray" }}>Doctors</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">About Us</Link>
+                <NavLink className="nav-link" to="/about" activeStyle={{ fontWeight: "bold", color: "gray" }}>About Us</NavLink>
               </li>
               <li className="nav-item">
-                {user.displayName?<Link className="nav-link disabled" to="">{user.displayName}</Link>
-                :<Link className="nav-link disabled" to="">{user.email}</Link>}
+                {user.displayName ? <Link className="nav-link disabled" to="">{user.displayName}</Link>
+                  : <Link className="nav-link disabled" to="">{user.email}</Link>}
               </li>
               {user.email ? <li className="nav-item">
                 <Link className="nav-link" to="/login"><Button className="rounded-pill px-4" onClick={SignOut}><i className="fas fa-sign-out-alt"></i>  LogOut</Button></Link>

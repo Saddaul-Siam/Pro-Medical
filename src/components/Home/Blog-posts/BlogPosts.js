@@ -11,7 +11,7 @@ const BlogPosts = () => {
   return (
     <div className="container py-5">
       <div className="row">
-        <h1 className="py-5">Here’s to your health</h1>
+        <h1 className="pb-5">Here’s to your health</h1>
         {blogPost.map(blogPost => <BlogPost key={blogPost.id} blogPost={blogPost}></BlogPost>)}
       </div>
     </div>

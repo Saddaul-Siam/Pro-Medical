@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const BlogPost = ({ blogPost }) => {
   const { name, title, img, id } = blogPost;
   return (
-    <div className="col-md-3">
+    <div className="col-sm-6 col-md-6 col-lg-3">
       <Link to={`/blog/${id}`} className="fw-bold text-decoration-none text-black">
         <Card className="border-0" style={{ width: '18rem' }}>
           <div className="inner">
